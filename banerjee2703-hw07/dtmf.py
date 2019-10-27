@@ -1,3 +1,8 @@
+'''
+Name: Sidharth Banerjee
+ID  : 1001622703
+'''
+
 from scipy.signal import freqz
 import numpy as np
 import pandas as pd
@@ -50,14 +55,10 @@ def processTones(name, L, fs, samplesPerTone) :
         plt.plot(x*1000, abs(y))
     plt.title('Frequency Responses of Bandpass Filters')
     plt.xlabel('Hertz')
-    plt.show()
-    plt.tight_layout()
 
+    f, t, Sxx = spectrogram (data, fs)
     plt.figure('Figure 2: Figure 2: Spectrogram for a specific set of tones')
-    for i in range(0, len(data), samplesPerTone):
-        x = data[i:i+samplesPerTone,]
-        f, t, Sxx = spectrogram (x, fs)
-        plt.pcolormesh(t, f, Sxx)
+    plt.pcolormesh(t, f, Sxx)
     plt.xlabel('Time [sec]')
     plt.ylabel('Frequency [Hz]')
     plt.show()
@@ -66,7 +67,7 @@ def processTones(name, L, fs, samplesPerTone) :
 
 #############  main  #############
 if __name__ == "__main__":
-    filename = "tones-7481414.csv"  #  name of file to process
+    filename = "tones.csv"  #  name of file to process
     L = 64                  #  filter length
     fs = 8000               #  sampling rate
     samplesPerTone = 4000   #  4000 samples per tone,
