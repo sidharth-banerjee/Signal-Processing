@@ -1,10 +1,15 @@
+'''
+Name: Sidharth Banerjee
+ID  : 1001622703
+'''
+
 import numpy as np
 import matplotlib.pyplot as plt
 import soundfile as sf
 
 
 def applyShelvingFilter(inName, outName, g, fc) :
-    pass 
+    pass
 
 
 ##########################  main  ##########################
