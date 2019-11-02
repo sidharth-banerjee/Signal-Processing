@@ -36,9 +36,8 @@ def plot_limitX(y, x_low, x_high, title):
             y2.append(0)
         else:
             y2.append(y[i])
-    x = np.arange(x_low, x_high, 1)
     plt.figure(title)
-    plt.plot(x, y2)
+    plt.plot(np.arange(x_low, x_high, 1), y2)
     plt.tight_layout()
 
 def plot_limitY(y, y_low, y_high, title):
@@ -46,9 +45,8 @@ def plot_limitY(y, y_low, y_high, title):
     for i in range (0, len(y), 1):
         if y[i] >= -2.25 and y[i] <= 2.25:
             y2.append(y[i])
-    x = np.arange(0, len(y2), 1)
     plt.figure(title)
-    plt.plot(x, y2)
+    plt.plot(np.arange(0, len(y2), 1), y2)
     plt.tight_layout()
 
 def applyNotch(fs, dataFile) :

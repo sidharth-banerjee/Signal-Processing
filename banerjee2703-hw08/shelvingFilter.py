@@ -49,6 +49,7 @@ def plotData(y1, y2):
     plt.xlabel('Hz')
     plt.title('Filtered Signal')
     plt.tight_layout()
+    
     plt.show()
 
 def applyShelvingFilter(inName, outName, g, fc) :
@@ -60,6 +61,7 @@ def applyShelvingFilter(inName, outName, g, fc) :
     alpha = (1-gamma)/2
 
     u = u_n(data, alpha, gamma)
+
     y = y_n(data, mu, u)
 
     plotData(data, y)
