@@ -36,9 +36,9 @@ def buildSignature(song):
     return sig
 
 def classifyMusic() :
-    test_file = "test-winds.wav"
+    test_file = "testSong.wav"
 
-    song_names = database()
+    song_names = songNames()
 
     signatures = []
     for i in range (0, len(song_names), 1):
